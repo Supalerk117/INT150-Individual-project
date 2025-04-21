@@ -80,10 +80,46 @@ a{
 
 /* CONTENT */
 .content{
-    margin: 50px 1px 0 1px;
+    margin: 50px 30px 0 30px;
     display: flex;
     flex-direction: column;
 }
+.slide {
+    display: flex;
+    z-index: -2;
+}
+.slide img {
+    width: 1500px;
+}
+.slide button {
+    position: absolute;
+    padding: 10px;
+    background-color: rgb(58, 58, 58);
+    border-radius: 300px;
+    z-index: 1;
+    color: white;
+}
+
+.slide .right {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen (max-width:780px) {
     .logo-img {
     }
