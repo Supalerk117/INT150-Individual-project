@@ -135,17 +135,18 @@ a {
 
 /* CONTENT */
 .content {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   margin: 165px auto 0 auto;
   display: flex;
   width: 1296px;
-  align-content: center;
+  /* padding: 0 16px; */
   flex-direction: column;
 }
 .slide {
   position: relative;
   display: flex;
   align-self: center;
+  z-index: -2;
 }
 .slide img {
   width: 1264px;
@@ -183,7 +184,65 @@ a {
   font-size: 20px;
 }
 
-@media screen (max-width: 780px) {
-  .logo-img {
-  }
+.item-box{
+  width: 190.6px;
+  /* height: 248px; */
+  background-color: rgb(154, 154, 250);
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  border: 1px solid;
 }
+.item{
+  border: 1px solid green;
+}
+.item-img{
+  width: 100%;
+  height: 107px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.heart-icon{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.detail{
+  /* background-color: #5F5F5F; */
+}
+.title{
+  font-size: 14px;
+}
+.ask{
+  font-size: 12px;
+  color: #5F5F5F;
+}
+.price{
+  color: #242424;
+  font: 20px sans-serif;
+  font-weight: 700;
+}
+.ship{
+  background-color: #F3F2F1;
+}
+
+.brand-box{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  /* width: 100%; */
+  
+}
+.brand-box img{
+  border-radius:30px ;
+  width: 197px;
+  height: 134px;
+}
+
+/* @media screen (max-width: 780px) {
+} */
