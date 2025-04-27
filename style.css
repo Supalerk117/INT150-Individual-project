@@ -5,6 +5,9 @@ body {
   font-family: sans-serif;
   font-weight: 100;
 }
+h2 {
+  font-size: 18px;
+}
 a {
   text-decoration: none;
   color: black;
@@ -18,6 +21,7 @@ a {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 99;
 }
 
 .main {
@@ -34,6 +38,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.stockx-icon{
+  fill: #006340;
+  width: 125px;
+  height: auto;
 }
 .search-bar {
   border: 1px solid rgba(27, 27, 27, 0.293);
@@ -108,7 +117,7 @@ a {
 .extra a {
   color: black;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 550;
   padding: 0 8px;
   display: flex;
   align-items: center;
@@ -135,10 +144,10 @@ a {
 
 /* CONTENT */
 .content {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 165px auto 0 auto;
   display: flex;
-  width: 1296px;
+  width: 1264px;
   /* padding: 0 16px; */
   flex-direction: column;
 }
@@ -178,10 +187,9 @@ a {
   right: 30px;
 }
 
-#recomended {
+.text-icon {
   display: flex;
   gap: 3px;
-  font-size: 20px;
 }
 
 .item-box{
@@ -233,15 +241,41 @@ a {
 }
 
 .brand-box{
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  /* width: 100%; */
+  display: flex;
+  /* grid-template-columns: repeat(6,1fr); */
+  width: 100%;
+  gap: 16px;
   
 }
 .brand-box img{
-  border-radius:30px ;
-  width: 197px;
+  border-radius:15px ;
+  /* width: 197px; */
+  width: 100%;
   height: 134px;
+}
+.see-all *{
+  fill: #006340;
+}
+.see-all{
+  color: #006340;
+  float: right;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+
+.main{
+  display: flex;
+}
+.hamburger-menu , .search-bar{
+display:none;
+}
+}
+.logo{
+  justify-content: center;
 }
 
 /* @media screen (max-width: 780px) {
