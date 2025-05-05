@@ -5,6 +5,9 @@ body {
   font-family: sans-serif;
   font-weight: 100;
 }
+svg{
+  cursor: pointer;
+}
 h2 {
   font-size: 18px;
 }
@@ -110,19 +113,25 @@ a {
 }
 .extra {
   background: linear-gradient(to right, rgb(234, 234, 234), rgb(235, 235, 235));
-  padding: 15px;
+  padding: auto 15px;
+  height: 48px;
   display: flex;
   justify-content: center;
+  letter-spacing: 1.025px;
 }
 .extra a {
   color: black;
   font-size: 18px;
-  font-weight: 550;
+  font-weight: 500;
   padding: 0 8px;
   display: flex;
   align-items: center;
+  /* background-color: #ff952c; */
+  height: 100%;
 }
-
+.extra a:hover{
+  border-bottom: 3px solid black;
+}
 #theme {
   position: fixed;
   border: 0.75px solid rgba(128, 128, 128, 0.219);
@@ -193,25 +202,30 @@ a {
 }
 
 .item-box{
-  width: 190.6px;
+  /* width: 190.6px; */
   /* height: 248px; */
-  background-color: rgb(154, 154, 250);
+  /* background-color: rgb(154, 154, 250); */
   display: flex;
   width: 100%;
   gap: 25px;
-  border: 1px solid;
 }
 .item{
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  width: 100%;
 }
 .item-img{
-  width: 100%;
+  /* width: 100%; */
   height: 107px;
+  /* padding: 16px; */
   background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 4, 4); */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.item-img img{
+  width: 140px;
 }
 .heart-icon{
   width: 24px;
@@ -219,25 +233,42 @@ a {
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
 }
 
 .detail{
-  /* background-color: #5F5F5F; */
+  /* background-color: #f8c2c2; */
+  display: block;
+  /* flex-direction: column; */
+  padding: 0 8px ;
+  line-height: 1.3;
+}
+.detail span{
+  display: block;
 }
 .title{
   font-size: 14px;
+  /* background-color: #dcf8c2; */
 }
 .ask{
   font-size: 12px;
   color: #5F5F5F;
+  /* background-color: #98e9fd; */
 }
 .price{
   color: #242424;
   font: 20px sans-serif;
   font-weight: 700;
+  /* background-color: #ffec82; */
 }
 .ship{
   background-color: #F3F2F1;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  border-radius: 4px;
 }
 
 .brand-box{
@@ -265,6 +296,61 @@ a {
   gap: 2px;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  background-color: #006340;
+}
+
+
+
+
+
+footer{
+  background-color: #EDEDED;
+  padding: 32px 32px 0;
+  
+}
+.top-footer{
+  margin: 0px -768px;
+  padding: 24px 32px;
+}
+.bottom-footer{
+  background-color: #F4F3F1;
+  padding: 24px 32px;
+  z-index: ;
+}
+
+
 @media screen and (max-width: 767px) {
 
 .main{
