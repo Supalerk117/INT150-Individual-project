@@ -366,18 +366,70 @@ div.ship {
 /* FOOTER */
 
 footer{
-  background-color: #EDEDED;
-  padding: 32px 32px 0;
+  
+  /* padding: 32px 32px 0; */
   
 }
 .top-footer{
-  margin: 0px -768px;
+  /* padding: 24px 32px; */
+  background-color: #EDEDED;
+}
+.footer-container{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+}
+.footer-box{
+  display: flex;
+  flex-direction: column;
+}
+.footer-box h1{
+  font-size: 14px;
+}
+.footer-box a+a{
+  font-size: 12px
+}
+.top-footer *{
+  border: 1px solid blue;
+}
+
+
+.bottom-footer{
+  /* background-color: #F4F3F1; */
+  background-color: #24ff4c;
   padding: 24px 32px;
 }
-.bottom-footer{
-  background-color: #F4F3F1;
-  padding: 24px 32px;
-  z-index: ;
+.top-line{
+  display: flex;
+  justify-content: space-between;
+  background-color: cornflowerblue;
+  align-items: center;
+}
+.top-line *{
+  color: #242424;
+}
+.top-line button{
+  align-self: start;
+}
+.contact{
+
+
+}
+.footer-logo{
+  align-items: ;
+}
+.credit{
+  font-size: 12px;
+  justify-content: center;
+}
+.credit *{
+  padding: 0 8px;
+}
+.language{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #242424;
 }
 
 
