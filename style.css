@@ -243,10 +243,13 @@ section{
 }
 
 .detail{
-  /* flex-direction: column; */
   /* background-color: #f8c2c2; */
-  padding: 0 8px ;
+  padding: 8px ;
   line-height: 1.3;
+}
+.detail p{
+  /* background-color: aqua; */
+  margin: 0;
 }
 .detail span{
   display: flex;
@@ -255,7 +258,13 @@ section{
 .title{
   font-size: 14px;
   /* background-color: #dcf8c2; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;        
+  -webkit-box-orient: vertical; 
+  overflow: hidden;             
+  text-overflow: ellipsis;
 }
+
 .ask{
   font-size: 12px;
   color: #5F5F5F;
@@ -279,23 +288,23 @@ section{
   max-width: 90px;
 }
 div.ship {
-  margin-top: -8px;
   padding: 2px;
 }
 
-.brand-box{
-  display: flex;
-  /* grid-template-columns: repeat(6,1fr); */
-  width: 100%;
+.brand-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
-  
-}
-.brand-box img{
-  border-radius:15px ;
-  /* width: 197px; */
   width: 100%;
-  height: 134px;
 }
+
+.brand-box img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 .see-all *{
   fill: #006340;
 }
@@ -316,31 +325,45 @@ div.ship {
 
 
 
+/* HELP */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body{
-  /* background-color: #006340; */
+.help{
+  display: flex;
+  width: 100%;
+  gap:15px;
+}
+.help svg{
+  height: 32px;
+  width: 32px;
+}
+.help *{
+  color: #FFFFFF;
+  fill: #ffffff;
+  font-size: 12px;
+  /* border: 1px solid green; */
+  margin: 0 0 10px 0;
+}
+.help a{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.help > div{
+  background-color: #393939;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+}
+.help h1{
+  font-weight: 750;
+}
+.help div div{
+  /* background-color: #ea9090; */
+  margin: 8.5px 0 0 10px;
 }
 
 
-
-
+/* FOOTER */
 
 footer{
   background-color: #EDEDED;
