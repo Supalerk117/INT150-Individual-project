@@ -366,10 +366,13 @@ div.ship {
 
 footer{
   padding: 32px 0 0;  
+  background-color: #EDEDED;
 }
 .top-footer{
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  width: 1264px;
   padding: 24px 110px;
-  background-color: #EDEDED;
 }
 .top-footer > h1{
   font: 32px serif
@@ -403,8 +406,16 @@ footer{
 
 .bottom-footer{
   background-color: #F4F3F1;
-  /* background-color: #24ff4c; */
-  padding: 24px 110px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px 0;
+}
+.bottom-footer > div{
+  margin: 0 auto;
+  width: 1264px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .top-line{
   display: flex;
@@ -426,9 +437,6 @@ footer{
 .download img{
   width: 272px;
 }
-.download span{
-
-}
 .top-line button{
   align-self: start;
   border: 1px solid;
@@ -438,10 +446,13 @@ footer{
   padding: 10px 20px;
 }
 .contact{
-
+  gap: 15px;
+  display: flex;
+  /* background-color: brown; */
 }
 .footer-logo{
-  
+  /* border: 1px solid rgb(154, 172, 255); */
+  display: flex;
 }
 .credit{
   font-size: 12px;
