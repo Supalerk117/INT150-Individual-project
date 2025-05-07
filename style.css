@@ -158,7 +158,7 @@ a {
   width: 1264px;
   /* padding: 0 16px; */
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 section{
   /* background-color: aqua; */
@@ -167,7 +167,7 @@ section{
   position: relative;
   display: flex;
   align-self: center;
-  z-index: -2;
+  cursor: pointer;
 }
 .slide img {
   width: 1264px;
@@ -212,11 +212,11 @@ section{
   display: flex;
   width: 100%;
   gap: 25px;
-  cursor: pointer;
 }
 .item{
   /* border: 1px solid green; */
   width: 100%;
+  cursor: pointer;
 }
 .item-img{
   /* width: 100%; */
@@ -295,6 +295,7 @@ div.ship {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
   width: 100%;
+  
 }
 
 .brand-box img {
@@ -302,6 +303,7 @@ div.ship {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .see-all *{
@@ -319,10 +321,14 @@ div.ship {
 }
 
 
-
-
-
-
+.big-picture{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.big-picture img{
+  border-radius:20px ;
+}
 
 /* HELP */
 
@@ -365,7 +371,6 @@ div.ship {
 /* FOOTER */
 
 footer{
-  padding: 32px 0 0;  
   background-color: #EDEDED;
 }
 .top-footer{
@@ -398,9 +403,6 @@ footer{
   font-size: 12px;
   margin: 0 0 12px 0;
   line-height: 1.25;
-}
-.top-footer *{
-  /* border: 1px solid blue; */
 }
 
 
@@ -437,13 +439,20 @@ footer{
 .download img{
   width: 272px;
 }
-.top-line button{
+.footer-logo button{
   align-self: start;
   border: 1px solid;
   border-radius: 300px;
   font-weight: 700;
   font-size: 16px;
   padding: 10px 20px;
+  transition: 0.25s;
+}
+.footer-logo button:hover{
+  background-color: black;
+  color: #ffffff;
+  transition: 0.25s;
+  cursor: pointer;
 }
 .contact{
   gap: 15px;
