@@ -1,19 +1,33 @@
-body {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
   font-family: sans-serif;
   font-weight: 100;
+  color: #242424;
 }
 svg{
   cursor: pointer;
 }
+h1 , h2 {
+  margin: 8px 0;
+}
+p{
+  margin: 4px 0;
+}
 h2 {
   font-size: 18px;
+  font-weight: 600;
 }
 a {
   text-decoration: none;
   color: black;
+}
+section{
+  /* background-color: #93ffd9; */
+  margin: 2px 0;
 }
 
 /* NAVBAR */
@@ -78,12 +92,14 @@ a {
 .hamburger-menu {
   display: flex;
   align-items: center;
+  flex-direction:space-between ;
   margin: 0px 30px 0px 0px;
   font-weight: 400;
+  gap: 10px;
 }
 .tab {
   text-align: center;
-  width: 50%;
+  width: 35%;
 }
 #login,#sign-up {
   border: 1px solid;
@@ -94,18 +110,15 @@ a {
 }
 #login {
   background-color: #ffffff;
-  margin-right: 8px;
   transition: 0.25s;
-  width: 50%;
-}
+  width: 40%;}
 #sign-up {
   background-color: #242424;
   color: #ffffff;
   transition: 0.25s;
-  width: 60%;
+  width: 50%;
 }
-#login:hover,
-#sign-up:hover {
+#login:hover,#sign-up:hover {
   background-color: black;
   color: #ffffff;
   transition: 0.25s;
@@ -113,24 +126,29 @@ a {
 }
 .extra {
   background: linear-gradient(to right, rgb(234, 234, 234), rgb(235, 235, 235));
-  padding: auto 15px;
+  padding: 0 15px; 
   height: 48px;
   display: flex;
   justify-content: center;
+  gap: 5px;
+  align-items: center; 
 }
+
 .extra a {
-  color: black;
   font-size: 18px;
   font-weight: 500;
   padding: 0 8px;
   display: flex;
   align-items: center;
-  /* background-color: #ff952c; */
   height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 3px;
 }
-.extra a:hover{
-  border-bottom: 3px solid black;
+
+.extra a:hover {
+  box-shadow: inset 0 -3px 0 #242424;
 }
+
 #theme {
   position: fixed;
   border: 0.75px solid rgba(128, 128, 128, 0.219);
@@ -156,12 +174,8 @@ a {
   margin: 165px auto 0 auto;
   display: flex;
   width: 1264px;
-  /* padding: 0 16px; */
   flex-direction: column;
   gap: 15px;
-}
-section{
-  /* background-color: aqua; */
 }
 .slide {
   position: relative;
@@ -171,7 +185,7 @@ section{
 }
 .slide img {
   width: 1264px;
-  height: 192.95px;
+  /* height: 192.95px; */
   border-radius: 20px;
 }
 .slide button {
@@ -284,7 +298,7 @@ section{
   padding: 5px;
   border-radius: 4px;
   width: 100%;
-  max-width: 90px;
+  max-width: 100px;
 }
 div.ship {
   padding: 2px;
@@ -316,8 +330,9 @@ div.ship {
   display: flex;
   position: absolute;
   right: 0;
-  gap: 2px;
+  gap: 4px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 
@@ -329,6 +344,205 @@ div.ship {
 .big-picture img{
   border-radius:20px ;
 }
+
+.release-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  color: #242424;
+  gap: 24px;
+}
+.release-box > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: burlywood; */
+  border: 1px solid rgba(129, 129, 129, 0.427);
+  border-radius: 15px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.release-box div > *{
+  margin: 8px 0;
+}
+.release-box h2{
+  /* background-color: rgb(197, 255, 236); */
+  position: relative;
+  align-self: start;
+  font-weight: 100;
+  width: 100%;
+  font: 24px serif;
+  margin-top:  16px;
+}
+.release-box .heart-icon{
+  position: static;
+  float: right;
+}
+.release-box img{
+  width: 156px;
+  padding: 8px 0;
+  /* background-color: rgb(210, 162, 255); */
+  /* border: 1px solid red; */
+}
+.release-box p{
+  /* background-color: rgb(255, 178, 194); */
+  font-size: 14px ;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;        
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+  line-height: 1.25;
+}
+
+
+
+.ig-slide{
+  display: flex;
+  overflow: hidden;
+  gap: 10px;
+  border-radius: 30px;
+  position: relative;
+  margin: 18px 0 0 0;
+  /* overflow-x: scroll; */
+  /* background-color: rgb(150, 190, 111); */
+}
+.ig-slide button{
+  position: absolute;
+  top: 40%;
+  right: 40px;
+  width: 40px;
+  height: 36px;
+  background-color: #242424;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+.ig-slide > div{ 
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ig-slide a, .ig-slide p{
+  position: absolute;
+  color: #ffffff;
+  z-index: 3;
+  opacity: 0; /* ซ่อนทั้งปุ่มและข้อความเมื่อยังไม่ hover */
+  transition: opacity 0.3s ease;
+}
+
+.ig-slide a{
+  /* Center the button both horizontally and vertically */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 22.5px;
+  padding: 10px 20px;
+  transition: 0.2s;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.ig-slide p{
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.ig-slide a:hover{
+  background-color: #FFFFFF;
+  transition: 0.2s;
+  color: #242424;
+}
+
+.ig-slide img {
+  width: 292px;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+/* Create an overlay effect for the image */
+.ig-slide > div {
+  position: relative;
+}
+
+.ig-slide > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2s;
+  border-radius: 30px;
+  z-index: 2;
+}
+
+/* Darken the image on hover of the container */
+.ig-slide > div:hover::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* แสดงปุ่มและข้อความเมื่อ hover */
+.ig-slide > div:hover a,
+.ig-slide > div:hover p {
+  opacity: 1;
+}
+
+/* Keep the image darkened when hovering over the button */
+.ig-slide a:hover ~ img {
+  filter: brightness(0.5);
+}
+
+.Magazine-box{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: 100%;
+  gap: 15px;
+  
+}
+.Magazine-box div{
+  display: flex;
+  flex-direction: column;  
+  border-radius:30px ;
+  padding: 0 0 10px 0;
+  background-color: darkseagreen;
+  border: 1px solid rgba(71, 71, 71, 0.46);
+}
+.Magazine-box img{
+  width: 100%;
+  height: 178px;
+  object-fit: cover;
+  overflow: hidden;
+  border-top-left-radius:30px ;
+  border-top-right-radius:30px  ;
+}
+.Magazine-box h2{
+  font-size: 16px;
+  background-color: cyan;
+  padding: 10px;
+
+}
+.Magazine-box li{
+  font-size: 14px;
+  color: #5F5F5F;
+  padding: 10px ;
+  background-color: darksalmon;
+}
+
 
 /* HELP */
 
@@ -368,6 +582,9 @@ div.ship {
 }
 
 
+
+
+
 /* FOOTER */
 
 footer{
@@ -377,10 +594,11 @@ footer{
   /* border: 1px solid red; */
   margin: 0 auto;
   width: 1264px;
-  padding: 24px 110px;
+  padding-top: 4px ;
 }
 .top-footer > h1{
-  font: 32px serif
+  font: 32px serif;
+  margin:20px 0;
 }
 .footer-container{
   display: grid;
@@ -468,7 +686,7 @@ footer{
   justify-content: center;
 }
 .credit *{
-  padding: 0 8px;
+  padding: 0 4px;
 }
 .language{
   display: flex;
