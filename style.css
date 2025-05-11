@@ -18,7 +18,7 @@ p{
   margin: 4px 0;
 }
 h2 {
-  font-size: 18px;
+  font-size: clamp(14px,2vw,18px);
   font-weight: 600;
 }
 a {
@@ -43,18 +43,21 @@ section{
 
 .main {
   background-color: rgb(255, 255, 255);
-  display: grid;
-  grid-template-columns: 1.16fr 4.8fr 3fr;
   width: 100%;
   height: 90px;
   min-height: 48px;
   border-bottom: 1px solid rgb(206, 206, 206);
+  display: flex;
+  gap: 1rem;
+  /* background-color: rgb(157, 157, 255); */
 }
 
-.logo {
+#logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 30px;
+  /* background-color: chartreuse; */
 }
 .stockx-icon{
   fill: #006340;
@@ -62,44 +65,106 @@ section{
   height: auto;
 }
 .search-bar {
-  border: 1px solid rgba(27, 27, 27, 0.293);
+  border: 1.5px solid rgba(27, 27, 27, 0.293);
   background-color: #fafafa;
   height: 44px;
-  width: 96%;
+  width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
   margin: auto 0;
   border-radius: 8px;
+  box-sizing: content-box;
+  transition: 0.3s;
 }
 .search-bar svg {
   margin: 0 10px;
 }
 .search-bar input {
   border: none;
+  outline: none; 
   background-color: transparent;
   width: 100%;
   font-size: 16px;
   height: 44px;
+  caret-color: #006340;
 }
-.search-bar input:focus {
-  border: none;
+.search-bar:hover{
+  border: 1.5px solid #4e4e4e;
+  transition: 0.3s;
+}
+.search-bar:has(input:focus) {
+  border: 1.525px solid #000000;
+  box-shadow: 0 0 2px 0#000000;
 }
 .search-bar input::placeholder {
-  color: black;
+  color: #242424;
+}
+.search-bar input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+  -webkit-appearance: none;
 }
 
-.hamburger-menu {
+
+
+.hamburger-menu{
   display: flex;
   align-items: center;
-  flex-direction:space-between ;
-  margin: 0px 30px 0px 0px;
+  margin: 0px 30px 0 20px;
   font-weight: 400;
   gap: 10px;
+  width: 485px;
 }
-.tab {
+.hamburger-menu >*{
   text-align: center;
-  width: 35%;
+  width: 100px;
+  /* background-color: rgb(255, 220, 220); */
+}
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* cursor: pointer; */
+}
+.dropdown >a{
+  z-index: 300;
+}
+.dropdown >div{
+  display: none;
+  background-color: #000000;
+  position: absolute;
+  right:0px;
+  top: 0px;
+  padding: 30px 0 0 0 ;
+  background: transparent;
+  /* background-color: coral; */
+}
+.dropdown:hover >div , .dropdown:hover div >div{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  transition: 2s;
+}
+.dropdown div div{
+  border-radius: 80px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+  box-shadow: 0 0 5px 0 rgb(49, 49, 49);
+  overflow: hidden;
+}
+.dropdown div a {
+  width: 200px;
+  transition: 0.2s;
+  padding: 8px;
+  background-color: #FFFFFF;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dropdown div a:hover{
+  background-color: rgb(235, 235, 235);
+  width: 200px;
+  transition: 0.2s;
 }
 #login,#sign-up {
   border: 1px solid;
@@ -111,12 +176,13 @@ section{
 #login {
   background-color: #ffffff;
   transition: 0.25s;
-  width: 40%;}
+  width: 150px;
+}
 #sign-up {
   background-color: #242424;
   color: #ffffff;
   transition: 0.25s;
-  width: 50%;
+  width: 170px;
 }
 #login:hover,#sign-up:hover {
   background-color: black;
@@ -124,13 +190,18 @@ section{
   transition: 0.25s;
   cursor: pointer;
 }
+
+
+
+
+
 .extra {
   background: linear-gradient(to right, rgb(234, 234, 234), rgb(235, 235, 235));
   padding: 0 15px; 
   height: 48px;
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 3px;
   align-items: center; 
 }
 
@@ -170,12 +241,14 @@ section{
 
 /* CONTENT */
 .content {
-  /* border: 1px solid red; */
   margin: 165px auto 0 auto;
   display: flex;
-  width: 1264px;
   flex-direction: column;
+  width: 1246px;
   gap: 15px;
+  /* width:  100%;
+  max-width: 1264px; */
+  /* border: 1px solid red; */
 }
 .slide {
   position: relative;
@@ -191,9 +264,10 @@ section{
 .slide button {
   position: absolute;
   top: 50%;
+  border: none;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background-color: #242424;
   padding: 10px;
   border-radius: 50%;
@@ -202,7 +276,7 @@ section{
   justify-content: center;
   color: white;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1;
 }
 
 .left {
@@ -224,12 +298,14 @@ section{
 .item-box{
   /* background-color: rgb(154, 154, 250); */
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   gap: 25px;
+  /* overflow-x: scroll; */
 }
 .item{
   /* border: 1px solid green; */
   width: 100%;
+  /* width: 190px; */
   cursor: pointer;
 }
 .item-img{
@@ -394,23 +470,26 @@ div.ship {
 }
 
 
-
+.section-ig-slide{
+  position: relative;
+  /* background-color: #ca8a01; */
+}
 .ig-slide{
   display: flex;
   overflow: hidden;
   gap: 10px;
   border-radius: 30px;
-  position: relative;
   margin: 18px 0 0 0;
-  /* overflow-x: scroll; */
+  overflow-x: auto;
   /* background-color: rgb(150, 190, 111); */
 }
 .ig-slide button{
   position: absolute;
-  top: 40%;
-  right: 40px;
-  width: 40px;
-  height: 36px;
+  top: 51%;
+  right: -20px;
+  width: 45px;
+  height: 45px;
+  border: none;
   background-color: #242424;
   padding: 10px;
   border-radius: 50%;
@@ -419,7 +498,7 @@ div.ship {
   justify-content: center;
   color: white;
   cursor: pointer;
-  z-index: 100;
+  z-index: 10;
 }
 .ig-slide > div{ 
   width: 300px;
@@ -434,12 +513,12 @@ div.ship {
   position: absolute;
   color: #ffffff;
   z-index: 3;
-  opacity: 0; /* ซ่อนทั้งปุ่มและข้อความเมื่อยังไม่ hover */
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .ig-slide a{
-  /* Center the button both horizontally and vertically */
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -473,7 +552,6 @@ div.ship {
   transition: 0.2s;
 }
 
-/* Create an overlay effect for the image */
 .ig-slide > div {
   position: relative;
 }
@@ -491,22 +569,24 @@ div.ship {
   z-index: 2;
 }
 
-/* Darken the image on hover of the container */
 .ig-slide > div:hover::after {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* แสดงปุ่มและข้อความเมื่อ hover */
 .ig-slide > div:hover a,
 .ig-slide > div:hover p {
   opacity: 1;
 }
 
-/* Keep the image darkened when hovering over the button */
 .ig-slide a:hover ~ img {
   filter: brightness(0.5);
 }
 
+.Magazine-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 1em 0;
+}
 .Magazine-box{
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -514,34 +594,54 @@ div.ship {
   gap: 15px;
   
 }
-.Magazine-box div{
+.Magazine-box >div{
   display: flex;
   flex-direction: column;  
-  border-radius:30px ;
-  padding: 0 0 10px 0;
-  background-color: darkseagreen;
-  border: 1px solid rgba(71, 71, 71, 0.46);
+  border-radius:15px ;
+  background-color: #FAFAFA;
+  border: 0.4px solid rgba(71, 71, 71, 0.46);
+  cursor: pointer;
 }
 .Magazine-box img{
   width: 100%;
   height: 178px;
   object-fit: cover;
   overflow: hidden;
-  border-top-left-radius:30px ;
-  border-top-right-radius:30px  ;
+  border-top-left-radius:15px ;
+  border-top-right-radius:15px  ;
+}
+.Magazine-box div div{
+  /* background-color: #3cffbb; */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.Magazine-box div div *{
+  /* background-color: burlywood; */
 }
 .Magazine-box h2{
   font-size: 16px;
-  background-color: cyan;
-  padding: 10px;
-
+  padding: 0 0 10px 0;
+  margin: 0;
+  /* background-color: cyan; */
+}
+.Magazine-box ul{
+  list-style-position: inside;
 }
 .Magazine-box li{
   font-size: 14px;
   color: #5F5F5F;
-  padding: 10px ;
-  background-color: darksalmon;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* background-color: darksalmon; */
 }
+.Magazine-box span{
+  font-size:20px ;
+}
+
+
+
 
 
 /* HELP */
@@ -709,18 +809,75 @@ footer{
 
 /* RESPONSIVE */
 
+
+/* #search-icon,#hamburger-icon{
+  display: none;
+}
+
+@media screen and (max-width: 1246px) {
+.content{
+  border: 1px solid red;
+}
+}
+
+
+@media screen and (max-width: 1183px) {
+  .item-box{
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 990px) {
+  .footer-container{
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+  .download{
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 767px) {
 
 .main{
-  display: flex;
-}
-.hamburger-menu , .search-bar{
-display:none;
-}
-}
-.logo{
+  gap: 29rem;
+  align-items: center;
   justify-content: center;
 }
+.hamburger-menu , .search-bar{
+  display:none;
+}
 
-/* @media screen (max-width: 780px) {
+#search-icon,#hamburger-icon{
+  display: block;
+  width: 50px;
+  cursor: pointer;
+}
+
+#search-icon{
+  order: 1;
+  justify-self: end;
+}
+#logo{
+  scale: 1.75;
+}
+#hamburger-icon{
+  order: -1;
+  justify-self: start;
+}
+
+
+}
+
+
+@media screen and (max-width: 780px) {
+
+}
+@media screen and (max-width: 728px) {
+  .footer-container{
+  display: flex;
+  flex-direction: column ;
+}
+ .footer-container a+a{
+  display: none;
+ }
 } */
