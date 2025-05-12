@@ -201,8 +201,8 @@ section {
   height: 48px;
   display: flex;
   justify-content: center;
-  gap: 3px;
   align-items: center;
+  gap: 3px;
 }
 
 .extra a {
@@ -599,41 +599,42 @@ div.ship {
   width: 100%;
   gap: 15px;
 }
-.Magazine-box > div {
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  background-color: #fafafa;
-  border: 0.4px solid rgba(71, 71, 71, 0.46);
-  cursor: pointer;
-}
 .Magazine-box img {
   width: 100%;
-  height: 178px;
+  height: 100%;
+  max-height: 178px;
   object-fit: cover;
   overflow: hidden;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.Magazine-box div div {
+.Magazine-box .img-container{
+  /* background-color: #ff1414; */
+  overflow:hidden ;
+}
+.Magazine-box > div{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #fafafa;
+  /* background-color: aquamarine; */
+  border: 0.4px solid rgba(71, 71, 71, 0.46);
+  cursor: pointer;
+}
+.Magazine-box div div+div {
   /* background-color: #3cffbb; */
   padding: 16px;
   display: flex;
   flex-direction: column;
 }
-.Magazine-box div div * {
-  /* background-color: burlywood; */
-}
+
 .Magazine-box h2 {
   font-size: 16px;
   padding: 0 0 10px 0;
   margin: 0;
   /* background-color: cyan; */
 }
-.Magazine-box ul {
-  list-style-position: inside;
-}
-.Magazine-box li {
+.Magazine-box p {
   font-size: 14px;
   color: #5f5f5f;
   display: flex;
@@ -798,40 +799,16 @@ footer {
 
 /* RESPONSIVE */
 
-#search-icon,
-#hamburger-icon {
+#search-icon,#hamburger-icon {
   display: none;
 }
 .drop-icon {
   display: none;
 }
-@media screen and (max-width: 1246px) {
-  /* .content{
-  width: 100vw;
-  overflow-x: hidden ;
+.new-article{
+  display: none;
 }
-section{
-    
-}
-.item-box{
-  overflow-x:hidden;
-  width: 1000px;
-} 
-.item{
-   width: 100px;
-} */
-  /* .slide {
-}
-img{
-  width: 100%;
-  height: 100%;
-}
-.item-box{
-  flex-wrap: wrap;
-} */
-}
-
-@media screen and (max-width: 1183px) {
+@media screen and (max-width: 1190px) {
   .item-box,
   .release-box,
   .brand-box,
@@ -852,6 +829,7 @@ img{
 }
 
 @media screen and (max-width: 915px) {
+  
   .main {
     align-items: center;
     justify-content: space-between;
@@ -877,13 +855,21 @@ img{
   #hamburger-icon {
     order: -1;
   }
+  .extra a{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 800px) {
   .extra{
     overflow-x: scroll;
-    justify-content:start;
   }
   .extra a{
-    font-size:18px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
   }
+  
 }
 @media screen and (max-width: 767px) {
   .help {
@@ -899,15 +885,56 @@ img{
     flex-direction: column;
     justify-content: center;
   }
-  .Magazine-box > div {
+  .Magazine-box div {
     flex-direction: row;
+    border: 0.5px soli rgba(58, 58, 58, 0.318);
   }
-  .Magazine-box img {
+  .Magazine-box .img-container {
     border-radius: 15px;
-    width: 50vw;
-    max-width: 300px;
+    max-width: 280px;
+    width: 100%;
+    min-width: 120px;
+    /* max-height:150px ; */
+    height: 20px;
+    /* min-height: 20px; */
+  }
+  .Magazine-box img{
+    width: 100%;
+    border-radius: 0px;
+  }
+  .Magazine-box div div+div  {
+  background-color: rgb(112, 250, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Magazine-box h2{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  .new-article{
+    display: block;
+    border: 1px solid;
+    border-radius: 300px;
+    background-color: #FFFFFF;
+    height: 36px;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    margin: 18px 0 0 0;
+    transition: 0.25s;
+  }
+  .new-article:hover{
+    background-color: black;
+    color: #ffffff;
+    transition: 0.25s;
+    cursor: pointer;
   }
 }
+
 @media screen and (max-width: 500px) {
   .slide img{
     border-radius: 0px;
@@ -932,7 +959,6 @@ img{
   }
   .drop-icon {
     display: block;
-    /* float: right; */
     width: 16px;
     rotate: 180deg;
     cursor: pointer;
@@ -955,6 +981,6 @@ img{
   }
 }
 
-footer {
+/* footer {
   display: none;
-}
+} */
