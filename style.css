@@ -306,7 +306,7 @@ section {
   width: 100%;
   cursor: pointer;
 }
-.item-img {
+.item- {
   width: 100%;
   max-width: 180px;
   height: auto;
@@ -315,10 +315,9 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
-  flex: 1 1 160px; /* ให้แต่ละอันมีขนาดขั้นต่ำ */
-  max-width: 200px; /* ป้องกันไม่ให้เกิน */
-  /* height: 100%; */
-  /* padding: 16px; */
+  flex: 1 1 160px; 
+  max-width: 200px; 
+  padding: 16px;
   /* background-color: rgb(255, 4, 4); */
 }
 .item-img img {
@@ -328,8 +327,8 @@ section {
   width: 24px;
   height: 24px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   cursor: pointer;
 }
 
@@ -348,7 +347,6 @@ section {
 }
 .title {
   font-size: 14px;
-  /* background-color: #dcf8c2; */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -609,7 +607,6 @@ div.ship {
   border-top-right-radius: 15px;
 }
 .Magazine-box .img-container{
-  /* background-color: #ff1414; */
   overflow:hidden ;
 }
 .Magazine-box > div{
@@ -617,12 +614,10 @@ div.ship {
   flex-direction: column;
   border-radius: 15px;
   background-color: #fafafa;
-  /* background-color: aquamarine; */
   border: 0.4px solid rgba(71, 71, 71, 0.46);
   cursor: pointer;
 }
 .Magazine-box div div+div {
-  /* background-color: #3cffbb; */
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -630,8 +625,12 @@ div.ship {
 
 .Magazine-box h2 {
   font-size: 16px;
-  padding: 0 0 10px 0;
-  margin: 0;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   /* background-color: cyan; */
 }
 .Magazine-box p {
@@ -808,6 +807,9 @@ footer {
 .new-article{
   display: none;
 }
+.Magazine-box hr{
+  display: none;
+}
 @media screen and (max-width: 1190px) {
   .item-box,
   .release-box,
@@ -885,35 +887,38 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-  .Magazine-box div {
+  .Magazine-box >div {
     flex-direction: row;
-    border: 0.5px soli rgba(58, 58, 58, 0.318);
+    border: none;
+    border-radius: none;
+    background-color: #FFFFFF;
+    /* border-top: 0.5px solid rgba(58, 58, 58, 0.318); */
+  }
+  .Magazine-box hr{
+    display: block;
+    background-color: #8f8f8f82;
+    height: 0.5px;
+    border: none;
   }
   .Magazine-box .img-container {
     border-radius: 15px;
-    max-width: 280px;
+    
     width: 100%;
     min-width: 120px;
-    /* max-height:150px ; */
-    height: 20px;
-    /* min-height: 20px; */
+    max-width: 250px;
+    
+    height: 100%;
+    min-height: 10px;
+    max-height:130px ;
   }
   .Magazine-box img{
-    width: 100%;
     border-radius: 0px;
   }
   .Magazine-box div div+div  {
-  background-color: rgb(112, 250, 255);
+  /* background-color: rgb(112, 250, 255); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.Magazine-box h2{
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
   .new-article{
     display: block;
@@ -942,12 +947,22 @@ footer {
   .content{
     padding: 0 8px;
     margin: 150px auto 0 auto;
-  
 }
 }
 /* MOBILE */
 
 @media screen and (max-width: 400px) {
+  .Magazine-box .img-container {
+    align-self: center;
+    justify-self: center;
+    margin: 10px;
+    width: 150px;
+    height: 88px;
+  }
+  .Magazine-box h2{
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+  }
   .content {
   }
   .footer-container {
@@ -981,6 +996,6 @@ footer {
   }
 }
 
-/* footer {
+footer {
   display: none;
-} */
+}
