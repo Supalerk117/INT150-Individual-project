@@ -214,6 +214,7 @@ section {
   height: 100%;
   box-sizing: border-box;
   padding-bottom: 3px;
+  white-space: nowrap; 
 }
 
 .extra a:hover {
@@ -306,7 +307,7 @@ section {
   width: 100%;
   cursor: pointer;
 }
-.item- {
+.item-img {
   width: 100%;
   max-width: 180px;
   height: auto;
@@ -333,12 +334,10 @@ section {
 }
 
 .detail {
-  /* background-color: #f8c2c2; */
   padding: 8px;
   line-height: 1.3;
 }
 .detail p {
-  /* background-color: aqua; */
   margin: 0;
 }
 .detail span {
@@ -482,9 +481,8 @@ div.ship {
   display: flex;
   overflow: hidden;
   gap: 10px;
-  border-radius: 30px;
   margin: 18px 0 0 0;
-  overflow-x: auto;
+  border-radius: 20px;
   /* background-color: rgb(150, 190, 111); */
 }
 .ig-slide button {
@@ -551,9 +549,9 @@ div.ship {
 }
 
 .ig-slide img {
-  width: 100%;
-  max-width: 292px;
-  border-radius: 30px;
+  /* width: 100%; */
+  max-width: 280px;
+  border-radius: 10%;
   transition: 0.2s;
 }
 
@@ -693,7 +691,7 @@ footer > div{
 .footer-box{
   width: 100%;
   max-width: 1246px;
-  border: 3px solid rgb(0, 0, 0);
+  /* border: 3px solid rgb(0, 0, 0); */
   display: flex;
   flex-direction: column;
 }
@@ -701,18 +699,18 @@ footer > div{
   margin: 0 auto;
   padding-top: 4px;
   background-color: #ededed;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* background-color: darkorchid; */
 }
 .grid-box{
-  background-color: chocolate;
+  /* background-color: chocolate; */
   display: flex;
   flex-direction: column;
 }
 .footer-box > h1 {
   font: 32px serif;
   margin: 20px 0;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .footer-grid {
   display: grid;
@@ -722,7 +720,7 @@ footer > div{
 .footer-grid h1 {
   font-size: 14px;
   margin: 0 0 12px 0;
-  background-color: crimson;
+  /* background-color: crimson; */
 }
 .footer-box a:hover {
   text-decoration: underline;
@@ -736,7 +734,7 @@ footer > div{
 
 .bottom-footer {
   background-color: #f4f3f1;
-  border:1px solid blue;
+  /* border:1px solid blue; */
   margin: 0 auto;
   width: 100%;
   padding: 32px 0;
@@ -750,7 +748,7 @@ footer > div{
 .top-line {
   display: flex;
   justify-content: space-between;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   align-items: center;
 }
 .download {
@@ -800,7 +798,7 @@ footer > div{
   justify-content: center;
   gap: 10px;
   font-size: 12px;
-  background-color: darkorange;
+  /* background-color: darkorange; */
 }
 
 /* RESPONSIVE */
@@ -821,18 +819,25 @@ footer > div{
 .display-2{
   display: none;
 }
+.footer-box > hr{
+  display: none;
+}
+
 @media screen and (max-width: 1190px) {
   .item-box,
   .release-box,
   .brand-box,
   .steals-box,
-  .big-picture {
+  .big-picture,
+  .ig-slide {
     overflow-x: scroll;
   }
 .footer-grid {
   gap: 0.4rem;
 }
-
+.top-footer {
+  padding: 0 10px;
+}
 }
 
 @media screen and (max-width: 990px) {
@@ -871,11 +876,6 @@ footer > div{
   #hamburger-icon {
     order: -1;
   }
-  .extra a{
-    font-size: 15px;
-  }
-
-
   .bottom-footer .footer-box {
     gap: 1vh;
   }
@@ -889,17 +889,16 @@ footer > div{
     left: 0.5vw;
     top: 0.5vh;
   }
-  
+  .extra{
+    justify-content: start;
+    overflow-x:scroll ;
+  }
 }
 @media screen and (max-width: 800px) {
-  .extra{
-    overflow-x: scroll;
-  }
   .extra a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1000px;
   }
 
   
@@ -982,9 +981,6 @@ footer > div{
   .bottom-footer {
     flex-direction: column;
   }
-  .big-picture a+a{
-    display: none;
-  }
   .footer-logo svg{
     position: static;
   }
@@ -1011,18 +1007,34 @@ footer > div{
     flex-direction: column;
   }
   .display-2 {
+    margin: 10px 0;
     display: flex;
+    align-items: center;
     gap: 4px;
-    padding-left: 1vw ;
   }
   #theme-footer{
     position: static;
+    height: 45px;
+    width: 45px;
+  }
+  .top-footer .USD{
+    /* padding: 20px 30px; */
   }
   .top-line .USD{
     display: none;
   }
-  #theme{
-    display: none;
+  #theme,.download{
+    display: none;  
+  }
+  .footer-box > hr{
+    margin: 10px 0;
+    display: block;
+  }
+  .bottom-footer{
+    padding-top: 0;
+  }
+  .top-line{
+    background-color: #ededed;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1032,13 +1044,24 @@ footer > div{
   .content{
     padding: 0 8px;
     margin: 150px auto 5px auto;
-    background-color: cyan;
+}
+.ig-slide img{
+  max-width: 212px;
+}
+.ig-slide button{
+  display: none;
 }
 }
 /* MOBILE */
 
 @media screen and (max-width: 400px) {
+  #logo {
+    scale: 1.25;
+  }
   .ig-slide{
+    display: none;
+  }
+  .big-picture a+a{
     display: none;
   }
   .Magazine-box .img-container {
@@ -1056,4 +1079,13 @@ footer > div{
   .download span {
     display: none;
   }
+  .credit{
+    padding: 0 10px;
+  }
+  .credit *{
+    text-align: center;
+  }
+}
+.Magazine-box p{
+  width: 100%;
 }
