@@ -1016,6 +1016,7 @@ footer > div{
     position: static;
     height: 45px;
     width: 45px;
+    z-index: 0;
   }
   .top-footer .USD{
     /* padding: 20px 30px; */
