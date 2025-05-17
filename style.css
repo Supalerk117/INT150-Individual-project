@@ -226,6 +226,7 @@ section {
   border: 0.75px solid rgba(128, 128, 128, 0.219);
   background-color: #ffffff;
   border-radius: 100%;
+  box-shadow: 0 0 3px 0 rgba(56, 56, 56, 0.389);
   height: 56px;
   width: 56px;
   bottom: 20px;
@@ -822,6 +823,9 @@ footer > div{
 .footer-box > hr{
   display: none;
 }
+.footer-logo img,.footer-logo p{
+  display: none;
+}
 
 @media screen and (max-width: 1190px) {
   .item-box,
@@ -869,9 +873,6 @@ footer > div{
   }
   #search-icon {
     order: 1;
-  }
-  #logo {
-    scale: 1.5;
   }
   #hamburger-icon {
     order: -1;
@@ -1018,9 +1019,6 @@ footer > div{
     width: 45px;
     z-index: 0;
   }
-  .top-footer .USD{
-    /* padding: 20px 30px; */
-  }
   .top-line .USD{
     display: none;
   }
@@ -1034,8 +1032,8 @@ footer > div{
   .bottom-footer{
     padding-top: 0;
   }
-  .top-line{
-    background-color: #ededed;
+    .ig-slide button{
+    display: none;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1049,21 +1047,30 @@ footer > div{
 .ig-slide img{
   max-width: 212px;
 }
-.ig-slide button{
-  display: none;
-}
 }
 /* MOBILE */
 
 @media screen and (max-width: 400px) {
+  .main{
+    height: 46px;
+  }
+  #search-icon,
+  #hamburger-icon {
+    width: 28px;
+    margin:0 5px
+  }
   #logo {
-    scale: 1.25;
+    scale: 0.75;
   }
-  .ig-slide{
-    display: none;
-  }
+    .content{
+    padding: 0 8px;
+    margin: 120px auto 5px auto;
+}
   .big-picture a+a{
     display: none;
+  }
+  .Magazine-box{
+    overflow: hidden;
   }
   .Magazine-box .img-container {
     align-self: center;
@@ -1079,7 +1086,23 @@ footer > div{
   }
   .download span {
     display: none;
+  }.footer-logo{
+    flex-direction: column;
+    align-items: center;
   }
+  .footer-logo{
+    background-color: #EDEDED;
+    width: 100%;
+    margin:0 0 10px 0
+  }
+  .footer-logo img{
+  display: block;
+  width: 100%;
+  max-width: 200px;
+}
+.footer-logo p{
+  display: block;
+}
   .credit{
     padding: 0 10px;
   }
