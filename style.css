@@ -54,6 +54,7 @@ section {
   border-bottom: 1px solid rgb(206, 206, 206);
   display: flex;
   gap: 1rem;
+  /* background-color: rgb(157, 157, 255); */
 }
 
 #logo {
@@ -61,6 +62,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 0 30px;
+  /* background-color: chartreuse; */
 }
 .stockx-icon {
   fill: #006340;
@@ -125,27 +127,31 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
+  /* cursor: pointer; */
+}
+.dropdown > a {
+  z-index: 300;
 }
 .dropdown > div {
   display: none;
+  background-color: #000000;
   position: absolute;
   right: 0px;
   top: 0px;
   padding: 30px 0 0 0;
   background: transparent;
+  /* background-color: coral; */
 }
-.dropdown:hover > div,.dropdown:hover div > div {
+.dropdown:hover > div,
+.dropdown:hover div > div {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   transition: 2s;
 }
-
-.dropdown > a {
-  z-index: 300;
-}
 .dropdown div div {
   border-radius: 80px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
   box-shadow: 0 0 5px 0 rgb(49, 49, 49);
   overflow: hidden;
 }
@@ -248,7 +254,6 @@ section {
   gap: 15px;
   padding: 0 16px; 
 }
-
 .slide {
   position: relative;
   display: flex;
@@ -290,15 +295,18 @@ section {
   display: flex;
   align-items: center;
   position: relative;
+  /* background-color: #56ffc4; */
   gap: 3px;
 }
 
 .item-box {
+  /* background-color: rgb(174, 174, 205);  */
   display: grid;
   grid-template-columns: repeat(6, minmax(140px, 1fr));
   gap: 25px;
 }
 .item {
+  /* border: 1px solid rgb(255, 255, 255); */
   width: 100%;
   cursor: pointer;
 }
@@ -314,6 +322,7 @@ section {
   flex: 1 1 160px; 
   max-width: 200px; 
   padding: 16px;
+  /* background-color: rgb(255, 4, 4); */
 }
 .item-img img {
   width: 140px;
@@ -341,7 +350,6 @@ section {
   font-size: 14px;
   margin: 10px 0 0 0;
 }
-
 .detail p {
   margin: 0;
 }
@@ -361,11 +369,13 @@ section {
 .ask {
   font-size: 12px;
   color: #5f5f5f;
-}S
+  /* background-color: #98e9fd; */
+}
 .price {
   color: #242424;
   font: 20px sans-serif;
   font-weight: 700;
+  /* background-color: #ffec82; */
 }
 .ship , .sold{
   background-color: #f3f2f1;
@@ -393,7 +403,6 @@ div.ship {
   gap: 16px;
 }
 .brand-box {
-  display: grid;
   grid-template-columns: repeat(5, minmax(140px, 1fr));
 }
 .steals-box,
@@ -459,6 +468,7 @@ div.ship {
   width: 100%;
   font: 24px serif;
   margin-top: 16px;
+  /* background-color: rgb(197, 255, 236); */
 }
 .release-box .heart-icon {
   position: static;
@@ -468,8 +478,11 @@ div.ship {
   width: 100%;
   max-width: 156px;
   padding: 8px 0;
+  /* background-color: rgb(210, 162, 255); */
+  /* border: 1px solid red; */
 }
 .release-box p {
+  /* background-color: rgb(255, 178, 194); */
   font-size: 14px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -480,6 +493,7 @@ div.ship {
 
 .section-ig-slide {
   position: relative;
+  /* background-color: #ca8a01; */
 }
 .ig-slide {
   display: flex;
@@ -487,10 +501,11 @@ div.ship {
   gap: 10px;
   margin: 18px 0 0 0;
   border-radius: 20px;
+  /* background-color: rgb(150, 190, 111); */
 }
 .ig-slide button {
   position: absolute;
-  top: 57%;
+  top: 51%;
   right: -20px;
   width: 45px;
   height: 45px;
@@ -552,6 +567,7 @@ div.ship {
 }
 
 .ig-slide img {
+  /* width: 100%; */
   max-width: 280px;
   border-radius: 10%;
   transition: 0.2s;
@@ -601,7 +617,7 @@ div.ship {
   gap: 15px;
 }
 .Magazine-box img {
-  width: 100%;  
+  width: 100%;
   height: 100%;
   max-height: 178px;
   object-fit: cover;
@@ -634,6 +650,7 @@ div.ship {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* background-color: cyan; */
 }
 .Magazine-box p {
   font-size: 14px;
@@ -642,11 +659,11 @@ div.ship {
   align-items: center;
   gap: 4px;
 width: 100%;
+  /* background-color: darksalmon; */
 }
 .Magazine-box span {
   font-size: 20px;
 }
-
 /* HELP */
 
 .help {
@@ -682,6 +699,7 @@ width: 100%;
 }
 .help div div {
   margin: 8.5px 0 0 10px;
+  /* background-color: #ea9090; */
 }
 
 /* FOOTER */
@@ -694,6 +712,7 @@ footer > div{
 .footer-box{
   width: 100%;
   max-width: 1246px;
+  /* border: 3px solid rgb(0, 0, 0); */
   display: flex;
   flex-direction: column;
 }
@@ -701,21 +720,24 @@ footer > div{
   margin: 0 auto;
   padding-top: 4px;
   background-color: #ededed;
+  /* border: 1px solid red; */
+  /* background-color: darkorchid; */
 }
 .grid-box{
+  /* background-color: chocolate; */
   display: flex;
   flex-direction: column;
 }
 .footer-box > h1 {
   font: 32px serif;
   margin: 20px 0;
+  /* background-color: aqua; */
 }
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
 }
-
 .footer-grid h1 {
   font-size: 14px;
   margin: 0 0 12px 0;
@@ -746,6 +768,7 @@ footer > div{
 .top-line {
   display: flex;
   justify-content: space-between;
+  /* background-color: cornflowerblue; */
   align-items: center;
 }
 .download {
@@ -776,8 +799,10 @@ footer > div{
 .contact {
   gap: 15px;
   display: flex;
+  /* background-color: brown; */
 }
 .footer-logo {
+  /* border: 1px solid rgb(154, 172, 255); */
   display: flex;
 }
 .credit {
@@ -796,6 +821,7 @@ footer > div{
   justify-content: center;
   gap: 10px;
   font-size: 12px;
+  /* background-color: darkorange; */
 }
 
 /* RESPONSIVE */
@@ -832,7 +858,6 @@ footer > div{
   .ig-slide {
     overflow-x: scroll;
   }
-
 .footer-grid {
   gap: 0.4rem;
 }
@@ -902,11 +927,6 @@ footer > div{
   
 }
 @media screen and (max-width: 767px) {
-  .Magazine-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
   .help {
     flex-direction: column;
     justify-content: center;
@@ -914,6 +934,11 @@ footer > div{
   }
   .slide button{
     display: none;
+  }
+  .Magazine-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .Magazine-box >div {
     flex-direction: row;
@@ -976,12 +1001,6 @@ footer > div{
   .footer-grid a {
     display: none;
   }
-  .drop-icon {
-    display: block;
-    width: 16px;
-    rotate: 180deg;
-    cursor: pointer;
-  }
   .footer-grid h1 {
     display: block;
   }
@@ -1002,6 +1021,12 @@ footer > div{
   }
   .grid-box a{
     margin: auto;
+  }
+  .drop-icon {
+    display: block;
+    width: 16px;
+    rotate: 180deg;
+    cursor: pointer;
   }
   .top-footer{
     flex-direction: column;
@@ -1035,97 +1060,89 @@ footer > div{
     display: none;
   }
 }
+
+/* MOBILE */
+
 @media screen and (max-width: 500px) {
   .slide img{
     border-radius: 0px;
   }
-  .content{
-    padding: 0 8px;
-    margin: 150px auto 5px auto;
-}
 .ig-slide img{
   max-width: 212px;
 }
+.main{
+  height: 46px;
 }
-/* MOBILE */
-
-@media screen and (max-width: 400px) {
-    .detail button{
-    display:block;
-  }
-
-  .main{
-    height: 46px;
-  }
-  #search-icon,
-  #hamburger-icon {
-    width: 28px;
-    margin:0 5px
-  }
-  #logo {
-    scale: 0.75;
-  }
-    .content{
-    padding: 0 8px;
-    margin: 110px auto 5px auto;
+#search-icon,
+#hamburger-icon {
+  width: 28px;
+  margin:0 5px
 }
-  .big-picture a+a{
-    display: none;
-  }
-  .Magazine-box{
-    overflow: hidden;
-  }
-  .Magazine-box .img-container {
-    align-self: center;
-    justify-self: center;
-    margin: 10px;
-    width: 100%;
-    max-width: 150px;
-    height: 88px;
-  }
-  .Magazine-box h2{
-    font-size: 13px;
-    -webkit-line-clamp: 2;
-  } 
-  .download span {
-    display: none;
-  }.footer-logo{
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-logo{
-    background-color: #EDEDED;
-    width: 100%;
-    margin:0 0 50px 0
-  }
-  .footer-logo img{
-  display: block;
+#logo {
+  scale: 0.75;
+}
+  .content{
+  padding: 0 8px;
+  margin: 110px auto 5px auto;
+}
+.big-picture a+a{
+  display: none;
+}
+.Magazine-box{
+  overflow: hidden;
+}
+.Magazine-box .img-container {
+  align-self: center;
+  justify-self: center;
+  margin: 10px;
   width: 100%;
-  max-width: 290px;
+  max-width: 150px;
+  height: 88px;
+}
+.Magazine-box h2{
+  font-size: 13px;
+  -webkit-line-clamp: 2;
+}
+.download span {
+  display: none;
+}.footer-logo{
+  flex-direction: column;
+  align-items: center;
+}
+.footer-logo{
+  background-color: #EDEDED;
+  width: 100%;
+  margin:0 0 50px 0
+}
+.footer-logo img{
+display: block;
+width: 100%;
+max-width: 290px;
 }
 .footer-logo p{
-  display: block;
+display: block;
 }
-  .credit{
-    padding: 0 10px;
-    margin: 10px 0;
+.credit{
+  padding: 0 10px;
+  margin: 10px 0;
+}
+.credit *{
+  text-align: center;
+}
+.detail button{
+  display:block;}
+  .extra a{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
   }
-  .credit *{
-    text-align: center;
+  .extra{
+    gap: 16px;
   }
-
-    .extra a{
-      font-size: 16px;
-      font-weight: 500;
-      padding: 0;
-    }
-    .extra{
-      gap: 16px;
-    }
-    .credit p{
-  display: block;
+  .credit p{
+display: block;
 }
 .language{
-  padding: 0 20px ;
+padding: 0 20px ;
 }
 }
