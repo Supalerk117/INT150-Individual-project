@@ -718,7 +718,7 @@ footer > div{
 
 .footer-grid h1 {
   font-size: 14px;
-  margin: 0 0 12px 0;
+  margin: 6px 0 12px 0;
 }
 .footer-box a:hover {
   text-decoration: underline;
@@ -730,7 +730,10 @@ footer > div{
   line-height: 1.25;
   font-weight: 100;
 }
-
+.grid-box h1{
+  font-weight: 700;
+  font-size: 14px;
+}
 .bottom-footer {
   background-color: #f4f3f1;
   margin: 0 auto;
@@ -1046,17 +1049,16 @@ footer > div{
 .ig-slide img{
   max-width: 212px;
 }
+.detail button{
+display:block;
+}
+.main{
+  height: 46px;
+}
 }
 /* MOBILE */
 
 @media screen and (max-width: 400px) {
-    .detail button{
-    display:block;
-  }
-
-  .main{
-    height: 46px;
-  }
   #search-icon,
   #hamburger-icon {
     width: 28px;
